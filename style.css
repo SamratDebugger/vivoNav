@@ -1,3 +1,6 @@
+/* fonts */
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
 /* css reset */
 * {
     margin: 0;
@@ -12,20 +15,73 @@
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     padding: 40px 20px;
+    font-family: 'Avenir', sans-serif;
 }
 
 nav a {
     text-decoration: none;
     color: black;
-    margin-left: 30px;
-}
 
-.login a {
-    margin-left: 30px;
-    text-decoration: none;
-    color: black;
-    font-size: larger;
 
 }
+
+nav a:not(:last-child) {
+    margin-right: 30px;
+}
+
+nav a:hover {
+    color: skyblue;
+}
+
+
+.login {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+
+.profile {
+    position: relative;
+}
+
+
+.dropdown {
+    box-shadow: 5px 4px 22px 7px rgba(0, 0, 0, 0.75);
+    border-radius: 20PX;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    transform: translateX(50%);
+    display: none;
+}
+
+.profile:hover .dropdown {
+    display: block;
+}
+
+
+
+
+.dropdown li {
+    list-style: none;
+    padding: 15px;
+
+
+}
+
+.dropdown li:not(:last-child) {
+    border-bottom: 1px solid grey;
+}
+
+.dropdown li:hover {
+    color: skyblue;
+}
+
+
+
+display: none;
